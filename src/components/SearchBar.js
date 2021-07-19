@@ -1,4 +1,5 @@
 import React from 'react'
+import Container from "@material-ui/core/Container";
 import TextField from "@material-ui/core/TextField";
 
 class SearchBar extends React.Component {
@@ -10,9 +11,12 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div>
-                <TextField id="outlined-search" label="Rechercher un film" type="search" onChange={this.handleChange.bind(this)} placeholder={this.state.placeholder} variant="outlined" />
-            </div>
+            <Container>
+                <TextField id="outlined-basic" label="Recherher un film..." variant="outlined" fullWidth
+                           onChange={this.handleChange.bind(this)} placeholder={this.state.placeholder}
+                />
+                <span><button>rechercher</button></span>
+            </Container>
         )
     }
 
